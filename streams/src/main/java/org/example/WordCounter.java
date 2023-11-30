@@ -1,5 +1,4 @@
 package org.example;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -7,13 +6,13 @@ import java.util.*;
 public class WordCounter {
 
     static void print(HashMap<String, Integer> map) {
-        ArrayList<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         LinkedHashMap<String, Integer> sortedMap = new LinkedHashMap<>();
         for (HashMap.Entry<String, Integer> entry : map.entrySet()) {
             list.add(entry.getValue());
         }
         list.sort(Collections.reverseOrder());
-        for (int num : list) {
+        for (int num: list) {
             for (HashMap.Entry<String, Integer> entry : map.entrySet()) {
                 if (entry.getValue().equals(num)) {
                     sortedMap.put(entry.getKey(), num);
