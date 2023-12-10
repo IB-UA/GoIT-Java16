@@ -35,7 +35,5 @@ public class TimeMonitor {
                 5,
                 TimeUnit.SECONDS
         );
-
-
     }
 }
